@@ -51,7 +51,7 @@ class ColorsController < ProtectedController
   end
 
   def color_params
-    params.require(:color).permit(:text)
+    params.require(:color).permit(:favorite)
   end
 
   private :set_color, :color_params
