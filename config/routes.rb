@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   patch '/change-password/:id' => 'users#changepw'
   resources :users, only: [:index, :show]
 
-  post '/colors' => 'colors#create'
+  resources :colors, only: [:index, :create, :update, :destroy]
 end
