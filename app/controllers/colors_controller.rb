@@ -5,7 +5,7 @@ class ColorsController < ProtectedController
   # GET /colors
   # GET /colors.json
   def index
-    @colors = Color.all
+    @colors = Color.where(:user_id => current_user.id)
 
     render json: @colors
   end
